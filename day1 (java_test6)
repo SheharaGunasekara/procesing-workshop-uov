@@ -1,0 +1,12 @@
+//size of canvas
+size (400,200);
+
+
+//variable declaration
+float price = 9.3;
+println ("price="+ price);
+
+
+// width,height in processing
+float widhHalf = height/2;
+println("Half 
