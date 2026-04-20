@@ -1,0 +1,33 @@
+void setup(){
+  size(400,400);
+}
+
+void draw()
+
+{
+  color skycolor = color (157,238,247);
+  color groundcolor = color (158,245,170);
+  color leafcolor = color (82,144,97);
+  color trunkcolor = color(95,57,26);
+  
+  background (skycolor);
+  noStroke();
+  
+  // Ground color
+  fill(groundcolor);
+  rect (0,height/2,400,height/2);
+  
+  //treee trunk
+  fill(trunkcolor);
+  rect(80,150,20,100);
+  
+  //tree leaves
+  fill(leafcolor);
+  ellipse(90,120,70,90);
+
+  //welcome message
+  String WelcomeMessage = "Hello from university of vavuniya";
+  textAlign(CENTER,400);
+  text(WelcomeMessage,width/2,height/2);
+  
+}
