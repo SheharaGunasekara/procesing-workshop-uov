@@ -1,0 +1,22 @@
+ int[] marks=new int[5];
+ 
+ void setup()
+{
+  size(400, 200);
+  
+ 
+
+  
+    marks[0] = 21;
+    marks[1] = 48;
+    marks[2] = 60;
+    marks[3] = 36;
+    marks[4] = 23;
+    
+   
+    
+  
+   println("the 1st marks is"+ marks[0]);
+    println("the 2st marks is"+ marks[1]); 
+  
+}
