@@ -1,0 +1,17 @@
+String []names={"gayan","amal","kamal"};
+
+void setup(){
+   size(500,600);
+  
+ 
+}
+
+void draw(){
+ for(int n=0;n<3;n++){
+    println("name in "+names[n]);
+   
+   
+   }
+
+
+}
