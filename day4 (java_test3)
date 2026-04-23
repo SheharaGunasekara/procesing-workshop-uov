@@ -1,0 +1,63 @@
+int numBalls = 50; 
+Ball[] balls = new Ball[numBalls];
+
+void setup() {
+  size(500, 400);
+  
+
+  for (int i = 0; i < balls.length; i++) {
+    float r = random(10, 30);
+   
+    float startX = random(r, width - r);
+    float startY = random(r, height - r);
+    color randomCol = color(random(255), random(255), random(255));
+    
+    balls[i] = new Ball(startX, startY, r, randomCol);
+  }
+}
+
+void draw() {
+ //background(0);
+  
+
+  for (int i = 0; i < balls.length; i++) {
+    balls[i].update();
+    balls[i].display();
+  }
+}
+
+class Ball {
+  float x, y;
+  float vx, vy;
+  float radius;
+  color col;
+  
+  Ball(float startX, float startY, float r, color col1) {
+    x = startX;
+    y = startY;
+    radius = r;
+    col = col1;
+  
+    vx = random(-3, 3);
+    vy = random(-3, 3);
+  }
+    
+  void update() {
+    x += vx;
+    y += vy;
+  
+    if (x - radius < 0 || x + radius > width) {
+      vx *= -1;
+    }  
+   
+    if (y - radius < 0 || y + radius > height) {
+      vy *= -1;
+    } 
+  }
+
+  void display() {
+    noStroke();
+    fill(col, 180); 
+    ellipse(x, y, radius * 2, radius * 2);
+  }
+}
