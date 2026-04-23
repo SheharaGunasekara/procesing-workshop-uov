@@ -1,0 +1,39 @@
+void setup(){
+    size (500,400);
+    Ball ball = new Ball(20);
+
+}
+
+
+class Ball{
+
+  float x,y;
+  float vx,vy;
+  float radius;
+  color col;
+  
+  
+  
+Ball(int x){
+    println("ball is called" + x);   }
+  
+  void update(){
+    x = x + vx;
+    y = y + vy;
+  
+   if(x - radius < 0 || x + radius > width){
+     vx = -vx;
+   }  
+   
+   if(y - radius < 0 || y + radius > height){
+     vy = -vy;
+   } 
+  }
+
+void display(){
+    fill(col);
+    ellipse(x,y,radius * 2,radius * 2);
+
+}
+
+}
